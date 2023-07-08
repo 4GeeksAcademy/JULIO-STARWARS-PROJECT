@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState, useContext } from "react";
 import { Context } from "../store/appContext";
-
+import { Link } from "react-router-dom";
 
 export const Characters = () => {
     const { store, actions } = useContext(Context)
@@ -19,7 +19,7 @@ export const Characters = () => {
                                 <h5 class="card-title">{item.name}</h5>
                                 <p class="card-text">Genero:{item.gender}</p>
                                 <p class="card-text">Eye Color:{item.eye_color}</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <Link rel="stylesheet" to={'/single/${id}'}>GOOOOOO</Link>
                             </div>
                         </div>
                     ))}
