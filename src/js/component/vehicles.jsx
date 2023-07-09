@@ -11,6 +11,7 @@ export const Vehicles = () => {
     return (
         <div>
             <div className="card-group">
+            <h1 style={{ color: "gray", fontSize: "24px" }}>NAVES</h1>
                 <div className="d-flex flex-row overflow-scroll">
                     {store.vehicles.map((item, id) => (
                         <div class="card" key={id} style={{ width: "18rem" }}>

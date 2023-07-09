@@ -11,6 +11,7 @@ export const Characters = () => {
     return (
         <div>
             <div className="card-group">
+            <h1 style={{ color: "gray", fontSize: "24px" }}>PERSONAJES</h1>
                 <div className="d-flex flex-row overflow-scroll">
                     {store.characters.map((item, id) => (
                         <div class="card" key={id} style={{ width: "18rem" }}>

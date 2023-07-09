@@ -11,6 +11,7 @@ export const Planets = () => {
     return (
         <div>
             <div className="card-group">
+            <h1 style={{ color: "gray", fontSize: "24px" }}>PLANETAS</h1>
                 <div className="d-flex flex-row overflow-scroll">
                     {store.planets.map((item, id) => (
                         <div class="card" key={id} style={{ width: "18rem" }}>
