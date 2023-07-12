@@ -3,20 +3,20 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Single = props => {
+export const SinglePlanets = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 
 	useEffect(()=>{
-		actions.obtenerPersonaje(params.theid)
+	actions.obtenerPlanets(params.theid)
 	},[])
-	console.log(store.character)
+	console.log(store.planet)
 	return (
 		<div className="jumbotron">
 			<div className="card" style={{"width": "18rem"}}>
-				<img src={"https://starwars-visualguide.com/assets/img/characters/" + (parseInt(params.theid)) + ".jpg"} className="card-img-top" alt="..."/>
+				<img src={""} className="card-img-top" alt="..."/>
 					<div className="card-body">
-						<h5 className="card-title">{store.character.name}</h5>
+						<h5 className="card-title">{store.planet.name}</h5>
 						<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<a href="#" className="btn btn-primary">Go somewhere</a>
 					</div>
@@ -34,6 +34,6 @@ export const Single = props => {
 	);
 };
 
-Single.propTypes = {
+SinglePlanets.propTypes = {
 	match: PropTypes.object
 };

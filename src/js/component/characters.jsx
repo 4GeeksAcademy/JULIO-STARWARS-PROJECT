@@ -20,7 +20,7 @@ export const Characters = () => {
                                 <h5 class="card-title">{item.name}</h5>
                                 <p class="card-text">Genero:{item.gender}</p>
                                 <p class="card-text">Eye Color:{item.eye_color}</p>
-                                <Link rel="stylesheet" to={'/single/${id}'}>GOOOOOO</Link>
+                                <Link rel="stylesheet" to={'/single/'+ (id+1)}>GOOOOOO</Link>
                             </div>
                         </div>
                     ))}

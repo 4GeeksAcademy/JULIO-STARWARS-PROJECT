@@ -20,8 +20,8 @@ export const Planets = () => {
                                 <h5 class="card-title">{item.name}</h5>
                                 <p class="card-text">Genero:{item.gender}</p>
                                 <p class="card-text">Eye Color:{item.eye_color}</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                                <Link rel="stylesheet" to={'/singlePlanet/'+ (id+1)}>GOOOO</Link>                            
+                                </div>
                         </div>
                     ))}
                 </div>
