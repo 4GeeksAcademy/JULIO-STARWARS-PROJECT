@@ -1,5 +1,6 @@
 import React, { Component, useEffect, useState, useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 
 export const Planets = () => {
@@ -7,7 +8,7 @@ export const Planets = () => {
     useEffect(() => {
         actions.obtenerPlanetas()
     })
-    console.log(store.planets)
+    // console.log(store.planets)
     return (
         <div>
             <div className="card-group">
@@ -20,7 +21,8 @@ export const Planets = () => {
                                 <h5 class="card-title">{item.name}</h5>
                                 <p class="card-text">Genero:{item.gender}</p>
                                 <p class="card-text">Eye Color:{item.eye_color}</p>
-                                <Link rel="stylesheet" to={'/singlePlanet/'+ (id+1)}>GOOOO</Link>                            
+                                <Link rel="stylesheet" to={'/singlePlanet/'+ (id+1)}>GOOOO</Link>    
+                                <button onClick={()=> actions.addFavorites(item.name)}><i className="fa fa-heart"></i></button>                        
                                 </div>
                         </div>
                     ))}

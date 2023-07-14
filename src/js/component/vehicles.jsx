@@ -7,7 +7,7 @@ export const Vehicles = () => {
     useEffect(() => {
         actions.obtenerVehicles()
     })
-    console.log(store.vehicles)
+    // console.log(store.vehicles)
     return (
         <div>
             <div className="card-group">
@@ -21,6 +21,7 @@ export const Vehicles = () => {
                                 <p class="card-text">Genero:{item.gender}</p>
                                 <p class="card-text">Eye Color:{item.eye_color}</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <button onClick={()=> actions.addFavorites(item.name)}><i className="fa fa-heart"></i></button>                        
                             </div>
                         </div>
                     ))}

@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const SinglePlanets = props => {
+export const SinglePlanet = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 
 	useEffect(()=>{
-	actions.obtenerPlanets(params.theid)
+	actions.obtenerPlaneta(params.theid)
 	},[])
-	console.log(store.planet)
+	// console.log(store.planet)
 	return (
 		<div className="jumbotron">
 			<div className="card" style={{"width": "18rem"}}>
@@ -19,6 +19,7 @@ export const SinglePlanets = props => {
 						<h5 className="card-title">{store.planet.name}</h5>
 						<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 						<a href="#" className="btn btn-primary">Go somewhere</a>
+                        
 					</div>
 			</div>
 			<h1 className="display-4">This will show the demo element: </h1>
@@ -34,6 +35,6 @@ export const SinglePlanets = props => {
 	);
 };
 
-SinglePlanets.propTypes = {
+SinglePlanet.propTypes = {
 	match: PropTypes.object
 };

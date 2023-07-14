@@ -10,9 +10,9 @@ export const Single = props => {
 	useEffect(()=>{
 		actions.obtenerPersonaje(params.theid)
 	},[])
-	console.log(store.character)
+	// console.log(store.character)
 	return (
-		<div className="jumbotron">
+		<div className="jumbotron container">
 			<div className="card" style={{"width": "18rem"}}>
 				<img src={"https://starwars-visualguide.com/assets/img/characters/" + (parseInt(params.theid)) + ".jpg"} className="card-img-top" alt="..."/>
 					<div className="card-body">

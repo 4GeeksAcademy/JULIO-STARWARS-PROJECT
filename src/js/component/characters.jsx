@@ -7,7 +7,7 @@ export const Characters = () => {
     useEffect(() => {
         actions.obtenerPersonajes()
     })
-    console.log(store.characters)
+    // console.log(store.characters)
     return (
         <div>
             <div className="card-group">
@@ -21,6 +21,7 @@ export const Characters = () => {
                                 <p class="card-text">Genero:{item.gender}</p>
                                 <p class="card-text">Eye Color:{item.eye_color}</p>
                                 <Link rel="stylesheet" to={'/single/'+ (id+1)}>GOOOOOO</Link>
+                                <button onClick={()=> actions.addFavorites(item.name)}><i className="fa fa-heart"></i></button>                        
                             </div>
                         </div>
                     ))}
