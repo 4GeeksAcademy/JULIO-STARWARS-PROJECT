@@ -1,5 +1,6 @@
 import React, { Component, useEffect, useState, useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 
 export const Vehicles = () => {
@@ -20,7 +21,7 @@ export const Vehicles = () => {
                                 <h5 class="card-title">{item.name}</h5>
                                 <p class="card-text">Genero:{item.gender}</p>
                                 <p class="card-text">Eye Color:{item.eye_color}</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <Link rel="stylesheet" to={'/vehicles/'+ (id+1)} className="profile">PROFILE</Link>
                                 <button onClick={()=> actions.addFavorites(item.name)}><i className="fa fa-heart"></i></button>                        
                             </div>
                         </div>

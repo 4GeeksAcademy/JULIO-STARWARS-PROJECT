@@ -6,6 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			vehicles: [],
 			character: {},
 			planet: {},
+			vehicle: {},
 			favorites: [],
 		},
 		actions: {
@@ -69,6 +70,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
+			obtenerVehiculo: async(id) => {
+				try{
+					const response = await fetch ("https://swapi.dev/api/vehicles/"+id)
+					const data = await response.json()
+					setStore({
+						vehicle: data
+					})
+				} catch(error){
+					console.log(error)
+				}
+			},
 			addFavorites:(item) => {
 				const store = getStore()
 				if (store.favorites.includes(item)){

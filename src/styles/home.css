@@ -1,9 +1,26 @@
 body, .container {
     background-color: rgb(243, 239, 239);
+    border-radius: 10px;
 }
-/* .container {
-    width: 120%;
-    height: 1400px;
-    justify-content: space-around;
-    background-color: #f0ebeb;
-  } */
+
+.boton-favoritos {
+    background-color: black;
+    width: 160px;
+    height: 40px;
+    margin-right: 60px;
+    font-weight: 800;
+    align-items: center;
+    border-radius: 5px;
+}
+.charactersCard{
+    background-color: rgb(4, 4, 4);
+    color: blue;
+}
+.card{
+    background-color: rgb(14, 14, 14);
+    color: crimson;
+    width: 80px;
+}
+.profile{
+    color:red
+}
