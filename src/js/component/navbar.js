@@ -7,7 +7,7 @@ export const Navbar = () => {
 	const {store, actions} = useContext(Context)
 	return (
 		<div className="container">
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar navbar bg mb-3">
 			<Link to="/">
 			<img src="https://logodownload.org/wp-content/uploads/2015/12/star-wars-logo-3-1.png" alt="Logo" style={{height:"200px", width:"400px"}} />			
 			</Link>

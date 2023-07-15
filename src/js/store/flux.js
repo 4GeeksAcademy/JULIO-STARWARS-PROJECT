@@ -24,9 +24,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			obtenerPlanetas: async() => {
 				try{
 					const response = await fetch ("https://swapi.dev/api/planets")
-					const datos = await response.json()
+					const data = await response.json()
 					setStore({
-						planets: datos.results
+						planets: data.results
 					})
 				} catch(error){
 					console.log(error)
@@ -37,9 +37,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			obtenerVehicles: async() => {
 				try{
 					const response = await fetch ("https://swapi.dev/api/vehicles")
-					const info = await response.json()
+					const data = await response.json()
 					setStore({
-						vehicles: info.results
+						vehicles: data.results
 					})
 				} catch(error){
 					console.log(error)
