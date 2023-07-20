@@ -15,7 +15,8 @@ export const SinglePlanet = props => {
 		<div className="jumbotron container">
 			<h5 className="card-title">{store.planet.name}</h5>
 			<div className="card" style={{"width": "18rem"}}>
-				<img src={"https://starwars-visualguide.com/assets/img/planets/" + (parseInt(params.theid)) + ".jpg"} className="card-img-top" alt="..."/>
+				{(parseInt(params.theid)) === 1 ? <img src="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png" className="card-img-top" alt="..."/>:
+				<img src={"https://starwars-visualguide.com/assets/img/planets/" + (parseInt(params.theid)) + ".jpg"} className="card-img-top" alt="..."/>}
 					<div className="card-body">
                         <p className="card-text">Rotation period: {store.planet.rotation_period}</p>
                         <p className="card-text">Diameter: {store.planet.diameter}</p>

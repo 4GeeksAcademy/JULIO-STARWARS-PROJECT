@@ -9,6 +9,7 @@ import { SinglePlanet } from "./views/singlePlanets.jsx"
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
+import { SingleVehicle } from "./views/singleVehicle.jsx";
 // import { Footer } from "./component/footer";
 
 //create your first component
@@ -27,7 +28,7 @@ const Layout = () => {
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="/singlePlanet/:theid" element={<SinglePlanet />} />
-						<Route path="/vehicles/:theid" element={<SinglePlanet />} />
+						<Route path="/vehicles/:theid" element={<SingleVehicle />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					{/* <Footer /> */}

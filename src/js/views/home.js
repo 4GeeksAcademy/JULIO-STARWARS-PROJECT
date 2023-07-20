@@ -9,7 +9,11 @@ export const Home = () => {
 	return (
 		<div className="container">
 			<Characters />
+			<br/>
+			<br/>
 			<Planets />
+			<br/>
+			<br/>
 			<Vehicles />
 		</div>
 	)

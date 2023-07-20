@@ -19,7 +19,8 @@ export const Planets = () => {
                     {store.planets.map((item, id) => (
                         <div className="card" key={id} style={{ width: "18rem" }}>
                             <h5 className="card-title">{item.name}</h5>
-                            <img src={"https://starwars-visualguide.com/assets/img/planets/" + (id + 1) + ".jpg"} className="card-img-top" alt="..." />
+                            {id === 0? <img src="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png" className="card-img-top" alt="..." />:
+                            <img src={"https://starwars-visualguide.com/assets/img/planets/" + (id + 1) + ".jpg"} className="card-img-top" alt="..." />}
                             <div className="card-body">
                                 <Link rel="stylesheet" to={'/singlePlanet/'+ (id+1)} className="profile">PROFILE</Link>    
                                 <button onClick={()=> actions.addFavorites(item.name)}><i className="fa fa-heart"></i></button>                        
